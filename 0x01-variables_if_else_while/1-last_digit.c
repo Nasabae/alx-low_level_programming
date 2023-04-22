@@ -8,20 +8,21 @@
 int main(void)
 {
 int n;
+int s;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-'a' == n % 10;
-if ('a' > 5)
+s = n % 10;
+if ('s' > 5)
 {
-printf("last digit of %d is %d and is greater than 5\n", n, 'a');
+printf("last digit of %d is %d and is greater than 5\n", n, 's');
 }
-else if ('a' == 0)
+else if ('s' == 0)
 {
-printf("last digit of %d is %d and is 0\n", n, 'a');
+printf("last digit of %d is %d and is 0\n", n, 's');
 }
 else
 {
-printf("last digit of %d is %d and is less than 6 and not 0\n", n, 'a');
+printf("last digit of %d is %d and is less than 6 and not 0\n", n, 's');
 }
 return (0);
 }
