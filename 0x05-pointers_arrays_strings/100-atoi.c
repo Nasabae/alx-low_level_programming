@@ -6,28 +6,33 @@
  */
 int _atoi(char *s)
 {
-int a = 0;
-unsigned int su = 0;
-int b = 1;
-int c = 0;
-while (s[a])
+int a, b, c, amp, d, digit;
+a = 0;
+b = 0;
+c = 0;
+amp = 0;
+d = 0;
+digit = 0;
+while (s[amp] != '\0')
+amp++;
+while (a < amp && d == 0)
 {
-if (s[a] == 45)
+if (s[a] == '-')
+++b;
+if (s[a] >= '0' && s[a] <= '9')
 {
-b *= -1;
-}
-while (s[a] >= 48 && s[a] <= 57)
-{
-c = 1;
-su = (su * 10) + (s[a] - '0');
-a++;
-}
-if (c == 1)
-{
+digit = s[a] - '0';
+if (b % 2)
+digit = -digit;
+c = c * 10 + digit;
+d = 1;
+if (s[a + 1] < '0' || s[a + 1] > '9')
 break;
+d = 0;
 }
 a++;
 }
-su = (b == 0); 
-return (su);
+if (d == 0)
+return (0);
+return (c);
 }
