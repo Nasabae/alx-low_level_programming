@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _memcpy - a function that copies a memory area
