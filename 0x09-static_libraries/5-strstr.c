@@ -26,4 +26,5 @@ z++;
 }
 haystack++;
 }
+return ('\0');
 }
