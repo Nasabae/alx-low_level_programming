@@ -10,22 +10,18 @@
  */
 int main(int argc, char *argv[])
 {
-int c = 0, d = 0, res = 0;
-char s;
+int (*oprt)(int, int);
 if (argc != 4)
 {
 printf("Error\n");
 exit(98);
 }
-/* check if there is only one operator*/
-if (argv[2][1] != '\0')
+oprt = get_op_func(argv[2]);
+if (!oprt)
 {
 printf("Error\n");
 exit(99);
 }
-c = atoi(argv[1]);
-d = atoi(argv[3]);
-res = (get_op_func(argv[2]))(c, d);
-printf("%d\n", res);
+printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 return (0);
 }
