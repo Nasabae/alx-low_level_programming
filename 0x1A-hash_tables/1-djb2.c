@@ -12,7 +12,7 @@ int z;
 
 hash = 5381;
 while ((z = *str++))
-hash = ((hash << 5) + hash) + z; /* hash * 33 + z */
+hash = ((hash << 5) + hash) +z; /* hash * 33 + z */
 
 return (hash);
 }
