@@ -24,7 +24,7 @@ struct listint_s *next;
 
 void print_array(const int *, size_t);
 void print_list(const listint_t *);
-void ssa_bubble_sort(int *array, size_t size);
+void bubble_sort(int *array, size_t size);
 void ssa_insertion_sort_list(listint_t **list);
 void ssa_selection_sort(int *array, size_t size);
 void ssa_quick_sort(int *array, size_t size);
