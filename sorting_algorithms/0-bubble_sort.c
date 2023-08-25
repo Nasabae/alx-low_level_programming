@@ -1,14 +1,14 @@
 #include "sort.h"
 
 /**
-* ssa_bubble_sort - Sorts an array of integers in ascending
+* bubble_sort - Sorts an array of integers in ascending
 * order using the Bubble sort algorithm.
 * @array: The array of integers to sort
 * @size: The size of the array of integers
 *
 * Return: Nothing!
 */
-void ssa_bubble_sort(int *array, size_t size)
+void bubble_sort(int *array, size_t size)
 {
 int i = 0, aux = 0, max = 0, swapped = 1;
 
